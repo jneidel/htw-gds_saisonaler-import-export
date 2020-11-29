@@ -1,0 +1,14 @@
+# latex
+*.aux
+*.log
+*.synctex.gz
+*.toc
+
+# biber
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+
+# output
+*.pdf

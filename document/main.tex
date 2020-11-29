@@ -1,0 +1,62 @@
+\documentclass{article}
+
+% german content
+\usepackage[ngerman]{babel}
+
+% bibliography
+\usepackage[
+backend=biber,
+style=authoryear,
+citestyle=authoryear,
+autocite=footnote
+]{biblatex}
+\addbibresource{bibliography.bib}
+
+% toc
+\usepackage[toc,page]{packages/appendix}
+
+% images
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% remove section number from name: https://tex.stackexchange.com/a/136528
+\makeatletter
+\def\@seccntformat#1{%
+  \expandafter\ifx\csname c@#1\endcsname\c@section\else
+  \csname the#1\endcsname\quad
+  \fi}
+\makeatother
+
+\title{Import/Export von saisonalen Produkten}
+\author{
+  Dao, Duc Trung\\
+  Gabele, Jörg\\
+  Neidel, Jonathan\\
+  Neuthor, Marco\\
+  Spannbauer, Daniel\\
+  Wiegandt, Lisa-Marlen
+}
+\date{Januar 2020}
+
+\begin{document}
+
+% title page
+\maketitle
+
+\vfill
+\section*{Abstract}
+
+% abstract here
+
+\break
+\tableofcontents
+\break
+
+% content here
+
+
+% bibliography
+\break
+\printbibliography
+
+\end{document}
