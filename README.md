@@ -4,6 +4,9 @@
 
 ## Organisation
 
+- [Pad](https://pad.riseup.net/p/gds-orga-keep)
+- [Meeting Raum](https://meet.in-berlin.de/gds)
+
 ### Projektphasen
 
 1. **Vorbereitung**
