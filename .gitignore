@@ -3,6 +3,9 @@
 *.log
 *.synctex.gz
 *.toc
+*.out
+*.nav
+*.snm
 
 # biber
 *.bbl

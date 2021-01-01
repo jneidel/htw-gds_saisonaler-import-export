@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{beamer}
 
 % german content
 \usepackage[ngerman]{babel}
@@ -12,54 +12,70 @@ autocite=footnote
 ]{biblatex}
 \addbibresource{bibliography.bib}
 
-% toc
-\usepackage[toc,page]{packages/appendix}
-
 % images
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 
-% remove section number from name: https://tex.stackexchange.com/a/136528
-\makeatletter
-\def\@seccntformat#1{%
-  \expandafter\ifx\csname c@#1\endcsname\c@section\else
-  \csname the#1\endcsname\quad
-  \fi}
-\makeatother
-
 \title{Import/Export von saisonalen Produkten}
-\author{
-  Dao, Duc Trung\\
-  Gabele, Jörg\\
-  Neidel, Jonathan\\
-  Neuthor, Marco\\
-  Spannbauer, Daniel\\
+% \subtitle{}
+\author[Dao, Gabele, Neidel, Neuthor, Spannbauer, Wiegandt]{
+  Dao, Duc Trung \and\\
+  Gabele, Jörg \and\\
+  Neidel, Jonathan \and\\
+  Neuthor, Marco \and\\
+  Spannbauer, Daniel \and\\
   Wiegandt, Lisa-Marlen
 }
 \date{Januar 2020}
+\institute{HTW Berlin, Angewandte Informatik}
+\logo{\includegraphics[width=1cm]{logo.png}}
+
+% theme + color theme
+\usetheme{Szeged}
+\usecolortheme{whale}
+% see: https://deic-web.uab.cat/~iblanes/beamer_gallery/index.html
 
 \begin{document}
+\frame{\titlepage}
 
-% title page
-\maketitle
+\begin{frame}
+\frametitle{Abstract}
+Abstract here
+\end{frame}
 
-\vfill
-\section*{Abstract}
-
-% abstract here
-
-\break
+% show all section names
+\begin{frame}
+\frametitle{Table of Contents}
 \tableofcontents
-\break
+\end{frame}
+% how to exclude a section from toc: https://tex.stackexchange.com/a/66633
 
-% 1. Problemformulierung
-% 2. Grundlagen/Theorie
-% 3. Methodolgie/Untersuchungsplanung
-% 4. Untersuchungsdurchführung, Auswertung und Ergebnisinterpretation
-% 5. Zusammenfassung
+
+\section{1st}
+\begin{frame}
+\frametitle{Sample frame title}
+This is a text in the first frame. This is a text in the first frame. This is a text in the first frame.
+\end{frame}
+\begin{frame}
+\frametitle{Sample frame title}
+This is a text in the first frame. This is a text in the first frame. This is a text in the first frame.
+\end{frame}
+
+\section{2nd}
+\begin{frame}
+\frametitle{Sample frame title}
+This is a text in the first frame. This is a text in the first frame. This is a text in the first frame.
+\end{frame}
+
+\section{3rd}
+\begin{frame}
+\frametitle{Sample frame title}
+This is a text in the first frame. This is a text in the first frame. This is a text in the first frame.
+\end{frame}
+
 
 % bibliography
-\break
-\printbibliography
+% \break
+% \printbibliography
 
 \end{document}

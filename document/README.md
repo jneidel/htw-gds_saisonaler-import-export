@@ -1,5 +1,10 @@
 # Latex Styleguide
 
+## Beamer Resources
+
+- [guide](https://www.overleaf.com/learn/latex/Beamer)
+- [tips & tricks](https://wiki.ipv6lab.f1.htw-berlin.de/public_v6/latex_beamer#text_hervorheben)
+
 ## Citations
 
 ```tex
