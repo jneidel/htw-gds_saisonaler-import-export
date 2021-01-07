@@ -3,6 +3,10 @@
 % german content
 \usepackage[ngerman]{babel}
 
+%for Lisas PC
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+
 % bibliography
 \usepackage[
 backend=biber,
@@ -26,9 +30,9 @@ autocite=footnote
   Spannbauer, Daniel \and\\
   Wiegandt, Lisa-Marlen
 }
-\date{Januar 2020}
+\date{Januar 2021}
 \institute{HTW Berlin, Angewandte Informatik}
-\logo{\includegraphics[width=1cm]{logo.png}}
+\logo{\includegraphics[width=1cm]{logo}}
 
 % theme + color theme
 \usetheme{Szeged}
@@ -39,19 +43,94 @@ autocite=footnote
 \frame{\titlepage}
 
 \begin{frame}
-\frametitle{Abstract}
-Abstract here
+\frametitle{Exposé}
+
+	Der Import und Export (zur Vereinfachung im Folgenden als Außenhandel benannt) von saisonellen Produkten schwankt je nach Saison des Produktes.
+
 \end{frame}
 
 % show all section names
 \begin{frame}
-\frametitle{Table of Contents}
+\frametitle{Inhalt}
 \tableofcontents
 \end{frame}
 % how to exclude a section from toc: https://tex.stackexchange.com/a/66633
 
 
-\section{1st}
+\section{Planung der Arbeit und Arbeitsverteilung}
+
+\begin{frame}
+	\begin{center}
+	{\Huge Planung der Arbeit und Arbeitsverteilung}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Erstellung eines Zeitplanes}
+	@Jonathans Teil
+\end{frame}
+
+\begin{frame}
+	\frametitle{Projektphasen}
+\end{frame}
+\begin{frame}
+	\frametitle{Rollenverteilung}
+	\begin{description}
+		\item[Duc Trung Dao, 575477]Main Data Seeker and Preprocessor
+		\item[Jörg Gabele, 571127]Master of Theorie
+		\item[Jonathan Neidel, 573619]Projekt Manager
+		\item[Marco Neuthor, 573738]Principal Visualizer
+		\item[Daniel Spannbauer, 572836]Head of Data Processing
+		\item[Lisa-Marlen Wiegandt, 572770]Editor of Chief
+	\end{description}
+    \end{frame}
+
+\section{Definitionen für diese Arbeit}
+\begin{frame}
+\frametitle{Export und Import}
+	\begin{description}
+		\item[Außenhandel] Großhandel von Deutschland
+		\item[Export] Gesamter Export von Deutschland bezogen jeweils auf ein Produkt, falls nicht anders angegeben.
+		\item[Import] Gesamter Import von Deutschland bezogen auf ein Produkt, falls nicht anders angegeben.
+	\end{description}
+\end{frame}
+
+\section{Datenbeschaffung}
+\begin{frame}
+	\frametitle{Phase 1}
+	allgemeine Datensuche: erste Quelle von 
+	BMEL Bundesministerium für Ernährung und Landwirtschaft - statistisches Jahrbuch (jährlich veröffentlich)
+	kein Datensatz, sondern PDF - Daten manuell erhoben
+
+	Problem: Es fehlten Monate - Datensätze wären unvollständig
+
+	Lösung: Quellenanalyse des Jahrbuch -> Quelle selbst angeschaut 
+
+	%Bilder/Screenshots einfügen
+\end{frame}
+
+\begin{frame}
+	\frametitle{Phase 2}
+	Datensatz gefunden auf destatis.de - StBa statistisches Bundesamt 
+	raw data gefunden - Download möglich
+	Export in Excel um csv lesbar zu machen und Übersicht zu verschaffen
+\end{frame}
+
+\section{Datenaufbereitung}
+\begin{frame}
+	\frametitle{1. Phase}
+	grobe Aufbereitung der csv in Excel (Hinweis: zB leere Zeilen entfernt)
+	%Screenshots?
+	%achtung: nicht großer Datensatz sagen
+\end{frame}
+\begin{frame}
+	\frametitle{2. Phase}
+	Arbeit mit R
+	Skripte geschrieben, die Datensatz aus der csv nutzen
+	%Screenshots der
+\end{frame}
+
+\section{Visualiserung}
 \begin{frame}
 \frametitle{Sample frame title}
 GitHub TEST
@@ -61,18 +140,20 @@ GitHub TEST
 This is a text in the first frame. This is a text in the first frame. This is a text in the first frame.
 \end{frame}
 
-\section{2nd}
+\section{Informationsgewinnung}
+\begin{frame}
+\frametitle{Sample frame title}
+GitHub TEST
+\end{frame}
 \begin{frame}
 \frametitle{Sample frame title}
 This is a text in the first frame. This is a text in the first frame. This is a text in the first frame.
 \end{frame}
 
-\section{3rd}
+\section{Fazit}
 \begin{frame}
-\frametitle{Sample frame title}
-This is a text in the first frame. This is a text in the first frame. This is a text in the first frame.
+	\frametitle{Fazit}
 \end{frame}
-
 
 % bibliography
 % \break
