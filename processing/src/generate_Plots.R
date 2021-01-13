@@ -15,6 +15,9 @@ for (dataset in datasets) {
 			create_colchart(dataset$csv, dataset$name, scales$combined, ordinate, isExport == 0)
 			create_colchart(dataset$yearly_avg, dataset$name, scales$yearly, ordinate, isExport == 0)
 			create_colchart(dataset$monthly_avg, dataset$name, scales$monthly, ordinate, isExport == 0)
+			
+			create_boxPlot(dataset$csv, dataset$name, dataset$csv$Jahr, scales$yearly, scales$monthly, ordinate, isExport == 0)
+			create_boxPlot(dataset$csv, dataset$name, dataset$csv$Monat.Nr., scales$monthly, scales$yearly, ordinate, isExport == 0)
 		}
 		
 		# create_colchart(potato_normalized_m, "Kartoffeln", normalized_m_scale, ordinate, TRUE)

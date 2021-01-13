@@ -17,7 +17,7 @@ transform_dataset_yearly <- function(dataframe, columnDefinition, transform_func
   for (column in columnDefinition) {
     data <- c()
     for (i in lowerBound:upperBound) {
-      data[i - lowerBound + 1] = transform_function(subset(dataframe, Jahr == i, select = column$row))
+      data[i - lowerBound + 1] = transform_function(subset(dataframe, Jahr == i, select = column$row), na.rm = TRUE)
     }
     returnval[column$name] <- data
   }
@@ -47,7 +47,7 @@ transform_dataset_monthly <- function(dataframe, columnDefinition, transform_fun
   for (column in columnDefinition) {
     data <- c()
     for (i in (lowerBound:upperBound)) {
-      data[i - lowerBound] = transform_function(subset(dataframe, Monat.Nr. == i, select = column$row))
+      data[i - lowerBound] = transform_function(subset(dataframe, Monat.Nr. == i, select = column$row), na.rm = TRUE)
     }
     returnval[column$name] <- data
   }
