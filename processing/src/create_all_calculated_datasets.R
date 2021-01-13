@@ -30,6 +30,7 @@ create_all_datasets <- function(columnDefinition) {
   returnval = define_dataset(returnval, columnDefinition, "Gurken")
   returnval = define_dataset(returnval, columnDefinition, "Himbeeren")
   returnval = define_dataset(returnval, columnDefinition, "Karotten")
+  returnval = define_dataset(returnval, columnDefinition, "Kurbisse")
   returnval = define_dataset(returnval, columnDefinition, "Spinat")
   returnval = define_dataset(returnval, columnDefinition, "Steinpilze")
   returnval = define_dataset(returnval, columnDefinition, "Tomaten")

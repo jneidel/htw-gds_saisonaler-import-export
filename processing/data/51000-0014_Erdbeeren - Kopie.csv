@@ -1,7 +1,7 @@
 Order;Jahr;Monat;Monat Nr.;Ausfuhr: Gewicht;Ausfuhr: Wert;Ausfuhr: Wert/Gewicht;Einfuhr: Gewicht;Einfuhr: Wert;Einfuhr: Wert/Gewicht
 1;2006;Januar;1;1;1;1;1;1;1
 2;2006;Februar;2;2;2;2;2;2;2
-3;2006;März;3;3;3;3;3;3;3
+3;2006;MÃ¤rz;3;3;3;3;3;3;3
 4;2006;April;4;4;4;4;4;4;4
 5;2006;Mai;5;5;5;5;5;5;5
 6;2006;Juni;6;6;6;6;6;6;6
@@ -13,7 +13,7 @@ Order;Jahr;Monat;Monat Nr.;Ausfuhr: Gewicht;Ausfuhr: Wert;Ausfuhr: Wert/Gewicht;
 12;2006;Dezember;12;12;12;12;12;12;12
 13;2007;Januar;1;13;1;1;1;1;1
 14;2007;Februar;2;14;2;2;2;2;2
-15;2007;März;3;15;3;3;3;3;3
+15;2007;MÃ¤rz;3;15;3;3;3;3;3
 16;2007;April;4;16;4;4;4;4;4
 17;2007;Mai;5;17;5;5;5;5;5
 18;2007;Juni;6;18;6;6;6;6;6
@@ -25,7 +25,7 @@ Order;Jahr;Monat;Monat Nr.;Ausfuhr: Gewicht;Ausfuhr: Wert;Ausfuhr: Wert/Gewicht;
 24;2007;Dezember;12;24;12;12;12;12;12
 25;2008;Januar;1;25;1;1;1;1;1
 26;2008;Februar;2;26;2;2;2;2;2
-27;2008;März;3;27;3;3;3;3;3
+27;2008;MÃ¤rz;3;27;3;3;3;3;3
 28;2008;April;4;28;4;4;4;4;4
 29;2008;Mai;5;29;5;5;5;5;5
 30;2008;Juni;6;30;6;6;6;6;6
@@ -37,7 +37,7 @@ Order;Jahr;Monat;Monat Nr.;Ausfuhr: Gewicht;Ausfuhr: Wert;Ausfuhr: Wert/Gewicht;
 36;2008;Dezember;12;36;12;12;12;12;12
 37;2009;Januar;1;37;1;1;1;1;1
 38;2009;Februar;2;38;2;2;2;2;2
-39;2009;März;3;39;3;3;3;3;3
+39;2009;MÃ¤rz;3;39;3;3;3;3;3
 40;2009;April;4;40;4;4;4;4;4
 41;2009;Mai;5;41;5;5;5;5;5
 42;2009;Juni;6;42;6;6;6;6;6
@@ -49,7 +49,7 @@ Order;Jahr;Monat;Monat Nr.;Ausfuhr: Gewicht;Ausfuhr: Wert;Ausfuhr: Wert/Gewicht;
 48;2009;Dezember;12;48;12;12;12;12;12
 49;2010;Januar;1;49;1;1;1;1;1
 50;2010;Februar;2;50;2;2;2;2;2
-51;2010;März;3;51;3;3;3;3;3
+51;2010;MÃ¤rz;3;51;3;3;3;3;3
 52;2010;April;4;52;4;4;4;4;4
 53;2010;Mai;5;53;5;5;5;5;5
 54;2010;Juni;6;54;6;6;6;6;6
@@ -61,7 +61,7 @@ Order;Jahr;Monat;Monat Nr.;Ausfuhr: Gewicht;Ausfuhr: Wert;Ausfuhr: Wert/Gewicht;
 60;2010;Dezember;12;60;12;12;12;12;12
 61;2011;Januar;1;61;1;1;1;1;1
 62;2011;Februar;2;62;2;2;2;2;2
-63;2011;März;3;63;3;3;3;3;3
+63;2011;MÃ¤rz;3;63;3;3;3;3;3
 64;2011;April;4;64;4;4;4;4;4
 65;2011;Mai;5;65;5;5;5;5;5
 66;2011;Juni;6;66;6;6;6;6;6
@@ -73,7 +73,7 @@ Order;Jahr;Monat;Monat Nr.;Ausfuhr: Gewicht;Ausfuhr: Wert;Ausfuhr: Wert/Gewicht;
 72;2011;Dezember;12;72;12;12;12;12;12
 73;2012;Januar;1;73;1;1;1;1;1
 74;2012;Februar;2;74;2;2;2;2;2
-75;2012;März;3;75;3;3;3;3;3
+75;2012;MÃ¤rz;3;75;3;3;3;3;3
 76;2012;April;4;76;4;4;4;4;4
 77;2012;Mai;5;77;5;5;5;5;5
 78;2012;Juni;6;78;6;6;6;6;6
@@ -85,7 +85,7 @@ Order;Jahr;Monat;Monat Nr.;Ausfuhr: Gewicht;Ausfuhr: Wert;Ausfuhr: Wert/Gewicht;
 84;2012;Dezember;12;84;12;12;12;12;12
 85;2013;Januar;1;85;1;1;1;1;1
 86;2013;Februar;2;86;2;2;2;2;2
-87;2013;März;3;87;3;3;3;3;3
+87;2013;MÃ¤rz;3;87;3;3;3;3;3
 88;2013;April;4;88;4;4;4;4;4
 89;2013;Mai;5;89;5;5;5;5;5
 90;2013;Juni;6;90;6;6;6;6;6
@@ -97,7 +97,7 @@ Order;Jahr;Monat;Monat Nr.;Ausfuhr: Gewicht;Ausfuhr: Wert;Ausfuhr: Wert/Gewicht;
 96;2013;Dezember;12;96;12;12;12;12;12
 97;2014;Januar;1;97;1;1;1;1;1
 98;2014;Februar;2;98;2;2;2;2;2
-99;2014;März;3;99;3;3;3;3;3
+99;2014;MÃ¤rz;3;99;3;3;3;3;3
 100;2014;April;4;100;4;4;4;4;4
 101;2014;Mai;5;101;5;5;5;5;5
 102;2014;Juni;6;102;6;6;6;6;6
@@ -109,7 +109,7 @@ Order;Jahr;Monat;Monat Nr.;Ausfuhr: Gewicht;Ausfuhr: Wert;Ausfuhr: Wert/Gewicht;
 108;2014;Dezember;12;108;12;12;12;12;12
 109;2015;Januar;1;109;1;1;1;1;1
 110;2015;Februar;2;110;2;2;2;2;2
-111;2015;März;3;111;3;3;3;3;3
+111;2015;MÃ¤rz;3;111;3;3;3;3;3
 112;2015;April;4;112;4;4;4;4;4
 113;2015;Mai;5;113;5;5;5;5;5
 114;2015;Juni;6;114;6;6;6;6;6
@@ -121,7 +121,7 @@ Order;Jahr;Monat;Monat Nr.;Ausfuhr: Gewicht;Ausfuhr: Wert;Ausfuhr: Wert/Gewicht;
 120;2015;Dezember;12;120;12;12;12;12;12
 121;2016;Januar;1;121;1;1;1;1;1
 122;2016;Februar;2;122;2;2;2;2;2
-123;2016;März;3;123;3;3;3;3;3
+123;2016;MÃ¤rz;3;123;3;3;3;3;3
 124;2016;April;4;124;4;4;4;4;4
 125;2016;Mai;5;125;5;5;5;5;5
 126;2016;Juni;6;126;6;6;6;6;6
@@ -133,7 +133,7 @@ Order;Jahr;Monat;Monat Nr.;Ausfuhr: Gewicht;Ausfuhr: Wert;Ausfuhr: Wert/Gewicht;
 132;2016;Dezember;12;132;12;12;12;12;12
 133;2017;Januar;1;133;1;1;1;1;1
 134;2017;Februar;2;134;2;2;2;2;2
-135;2017;März;3;135;3;3;3;3;3
+135;2017;MÃ¤rz;3;135;3;3;3;3;3
 136;2017;April;4;136;4;4;4;4;4
 137;2017;Mai;5;137;5;5;5;5;5
 138;2017;Juni;6;138;6;6;6;6;6
@@ -145,7 +145,7 @@ Order;Jahr;Monat;Monat Nr.;Ausfuhr: Gewicht;Ausfuhr: Wert;Ausfuhr: Wert/Gewicht;
 144;2017;Dezember;12;144;12;12;12;12;12
 145;2018;Januar;1;145;1;1;1;1;1
 146;2018;Februar;2;146;2;2;2;2;2
-147;2018;März;3;147;3;3;3;3;3
+147;2018;MÃ¤rz;3;147;3;3;3;3;3
 148;2018;April;4;148;4;4;4;4;4
 149;2018;Mai;5;149;5;5;5;5;5
 150;2018;Juni;6;150;6;6;6;6;6
@@ -157,7 +157,7 @@ Order;Jahr;Monat;Monat Nr.;Ausfuhr: Gewicht;Ausfuhr: Wert;Ausfuhr: Wert/Gewicht;
 156;2018;Dezember;12;156;12;12;12;12;12
 157;2019;Januar;1;157;1;1;1;1;1
 158;2019;Februar;2;158;2;2;2;2;2
-159;2019;März;3;159;3;3;3;3;3
+159;2019;MÃ¤rz;3;159;3;3;3;3;3
 160;2019;April;4;160;4;4;4;4;4
 161;2019;Mai;5;161;5;5;5;5;5
 162;2019;Juni;6;162;6;6;6;6;6
@@ -169,7 +169,7 @@ Order;Jahr;Monat;Monat Nr.;Ausfuhr: Gewicht;Ausfuhr: Wert;Ausfuhr: Wert/Gewicht;
 168;2019;Dezember;12;168;12;12;12;12;12
 169;2020;Januar;1;169;1;1;1;1;1
 170;2020;Februar;2;170;2;2;2;2;2
-171;2020;März;3;171;3;3;3;3;3
+171;2020;MÃ¤rz;3;171;3;3;3;3;3
 172;2020;April;4;172;4;4;4;4;4
 173;2020;Mai;5;173;5;5;5;5;5
 174;2020;Juni;6;174;6;6;6;6;6

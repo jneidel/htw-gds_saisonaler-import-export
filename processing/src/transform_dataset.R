@@ -38,7 +38,7 @@ transform_dataset_monthly <- function(dataframe, columnDefinition, transform_fun
   for (i in 1:(upperBound - lowerBound)) {
     order[i] = i - 1
     timeScale[i] = i
-    timeLabel[i] = dataframe$Monat[dataframe$Monat.Nr. == i][1]
+    timeLabel[i] = gsub("ä", "\u00E4",dataframe$Monat[dataframe$Monat.Nr. == i][1])
   }
   
   returnval <- data.frame(order, timeScale, timeLabel)

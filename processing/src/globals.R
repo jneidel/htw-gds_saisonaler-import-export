@@ -109,7 +109,7 @@ get_ordinates <- function() {
           else
             Data$Einfuhr..Wert)
       },
-      y_label = "Wert in Tsd. €",
+      y_label = "Wert in Tsd. \u20AC",
       y_title = "volumen in Euro",
       save_ordinate = "Euro"
     ),
@@ -120,7 +120,7 @@ get_ordinates <- function() {
           else
             Data$Einfuhr..Wert.Gewicht)
       },
-      y_label = "Wert in €/t",
+      y_label = "Wert in \u20AC/t",
       y_title = "wert in Euro pro Tonne",
       save_ordinate = "Euro_per_weight"
     )
