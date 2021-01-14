@@ -23,24 +23,24 @@ define_dataset = function(list, columnDefinition, name) {
 create_all_datasets <- function(columnDefinition) {
   returnval <- list()
   
-  returnval = define_dataset(returnval, columnDefinition, "Aepfel")
+  returnval = define_dataset(returnval, columnDefinition, "\u00C4pfeln")
   returnval = define_dataset(returnval, columnDefinition, "Birnen")
   returnval = define_dataset(returnval, columnDefinition, "Cornichons")
   returnval = define_dataset(returnval, columnDefinition, "Erbsen")
   returnval = define_dataset(returnval, columnDefinition, "Gurken")
   returnval = define_dataset(returnval, columnDefinition, "Himbeeren")
   returnval = define_dataset(returnval, columnDefinition, "Karotten")
-  returnval = define_dataset(returnval, columnDefinition, "Kurbisse")
+  returnval = define_dataset(returnval, columnDefinition, "K\u00FCrbissen")
   returnval = define_dataset(returnval, columnDefinition, "Spinat")
-  returnval = define_dataset(returnval, columnDefinition, "Steinpilze")
+  returnval = define_dataset(returnval, columnDefinition, "Steinpilzen")
   returnval = define_dataset(returnval, columnDefinition, "Tomaten")
   returnval = define_dataset(returnval, columnDefinition, "Zwiebeln")
 
-  returnval[["potato"]] <- create_datasets(read.csv2("./data/51000-0014_Kartoffeln.csv", na.strings = "0"), columnDefinition, "Kartoffeln")
-  returnval[["oranges"]] <- create_datasets(read.csv2("./data/51000-0014_Orangen.csv", na.strings = "0"), columnDefinition, "Orangen")
-  returnval[["spargel"]] <- create_datasets(read.csv2("./data/51000-0014_Spargel.csv", na.strings = "0"), columnDefinition, "Spargel")
-  returnval[["zitronen"]] <- create_datasets(read.csv2("./data/51000-0014_Zitronen.csv", na.strings = "0"), columnDefinition, "Zitronen")
-  returnval[["erdbeeren"]] <- create_datasets(read.csv2("./data/51000-0014_Erdbeeren.csv", na.strings = "0"), columnDefinition, "Erdbeeren")
+  returnval[["Kartoffeln"]] <- create_datasets(read.csv2("./data/51000-0014_Kartoffeln.csv", na.strings = "0"), columnDefinition, "Kartoffeln")
+  returnval[["Orangen"]] <- create_datasets(read.csv2("./data/51000-0014_Orangen.csv", na.strings = "0"), columnDefinition, "Orangen")
+  returnval[["Spargel"]] <- create_datasets(read.csv2("./data/51000-0014_Spargel.csv", na.strings = "0"), columnDefinition, "Spargel")
+  returnval[["Zitronen"]] <- create_datasets(read.csv2("./data/51000-0014_Zitronen.csv", na.strings = "0"), columnDefinition, "Zitronen")
+  returnval[["Erdbeeren"]] <- create_datasets(read.csv2("./data/51000-0014_Erdbeeren.csv", na.strings = "0"), columnDefinition, "Erdbeeren")
 
   return(returnval)
 }
