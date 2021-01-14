@@ -1,5 +1,5 @@
 # Style
-g_l_color <- "steelblue"
+g_l_color <- "#3498db" #"steelblue"
 g_l_linetype <- 1
 g_p_size <- 1
 t_hjust <- 0.5

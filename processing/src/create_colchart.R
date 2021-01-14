@@ -25,11 +25,15 @@ create_colchart <-
       x = as.factor(scale$x_supplier(dataframe)),
       y = ordinate$y_supplier(dataframe, is_Export)
     )) +
-      geom_col(linetype = g_l_linetype, fill = g_l_color) +
-      #theme_bw() +
+      
+      annotate("rect", xmin = 2.5, xmax = 10.5,
+               ymin = -Inf, ymax = Inf,
+               alpha = 0.2, fill = "#1e8449") +
+      
+      geom_col(fill = g_l_color) +
+     
       theme(plot.title = element_text(hjust = t_hjust),
-            #axis.text.x = element_text(angle = scale$angle),
-            #panel.grid = element_blank()
+            axis.line = element_line(linetype = 1),
             ) +
       labs(
         x = scale$x_label,
@@ -43,7 +47,7 @@ create_colchart <-
         )
       ) +
       scale_x_discrete(
-        expand = expansion(mult = c(0, 0)),
+        expand = expansion(add = .5),
         breaks = dataframe$timeScale,
         labels = dataframe$timeLabel
       ) +
@@ -93,18 +97,13 @@ create_boxPlot <-
       x = as.factor(x_row),
       y = ordinate$y_supplier(dataframe, is_Export)
     )) +
-      stat_summary(
-        fun.data = function(x) {
-          r <- quantile(x, probs = c(0, 0.25, 0.5, 0.75, 1))
-          names(r) <- c("ymin", "lower", "middle", "upper", "ymax")
-          r
-        },
-        geom = "boxplot"
-      ) +
-      #theme_bw() +
+      stat_boxplot(geom = "errorbar", width = 0.4, linetype = 1) +  
+      geom_boxplot(fill = g_l_color, coef = 1.5) +
+      
       theme(plot.title = element_text(hjust = t_hjust),
-            #panel.grid = element_blank()
+            axis.line = element_line(linetype = 1),
             ) +
+ 
       labs(
         x = scale$x_label,
         y = ordinate$y_label,
