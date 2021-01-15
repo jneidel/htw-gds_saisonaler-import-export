@@ -22,8 +22,8 @@ define_dataset = function(list, columnDefinition, name, annotations) {
   return(list)
 }
 
-define_annotation = function(xmin, xmax){
-  return(list(xmin=xmin, xmax=xmax))
+define_annotation = function(xmin, xmax, color){
+  return(list(xmin=xmin, xmax=xmax, color=color))
 }
 
 create_all_datasets <- function(columnDefinition) {

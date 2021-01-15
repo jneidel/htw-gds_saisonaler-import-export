@@ -213,7 +213,7 @@ applyAnnotations = function(plot, annotations, data_x_length) {
             ymin = -Inf,
             ymax = Inf,
             alpha = 0.2,
-            fill = "#1e8449"
+            fill = annotation$color
           )
         }
       }
