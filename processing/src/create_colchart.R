@@ -19,7 +19,7 @@ create_colchart <-
       x = as.factor(scale$x_supplier(dataframe)),
       y = ordinate$y_supplier(dataframe)
     ))
-    plot = applyAnnotations(plot, annotations, scale$x_supplier(dataframe))
+    plot = applyAnnotations(plot, annotations, length(scale$x_supplier(dataframe)))
     plot = plot + geom_col(fill = g_l_color) +
       theme(plot.title = element_text(hjust = t_hjust),
             axis.line = element_line(linetype = 1)) +
@@ -65,7 +65,7 @@ create_im_and_export_colchart <-
       id.vars = 'x'
     )
     plot = ggplot(data = data_src, aes(x = x, y = value, fill = variable))
-    plot = applyAnnotations(plot, annotations, scale$x_supplier(dataframe))
+    plot = applyAnnotations(plot, annotations, length(scale$x_supplier(dataframe)))
     plot = plot + geom_col(position = "dodge") +
       theme(plot.title = element_text(hjust = t_hjust),
             axis.line = element_line(linetype = 1)) +
@@ -111,7 +111,7 @@ create_boxPlot <-
     
     plot = ggplot(data = dataframe, aes(x = as.factor(x_row),
                                         y = ordinate$y_supplier()))
-    plot = applyAnnotations(plot, annotations, scale$x_supplier(dataframe))
+    plot = applyAnnotations(plot, annotations, nlevels(as.factor(x_row)))
     plot = plot + stat_boxplot(geom = "errorbar",
                                width = 0.4,
                                linetype = 1) +
@@ -161,7 +161,7 @@ create_im_and_export_boxPlot <-
     )
     
     plot = ggplot(data = data_src, aes(x = x, y = value, fill = variable))
-    plot = applyAnnotations(plot, annotations, x_row)
+    plot = applyAnnotations(plot, annotations, nlevels(as.factor(x_row)))
     plot = plot + stat_boxplot(geom = "errorbar",
                                #width = 0.4,
                                linetype = 1) +
@@ -201,10 +201,10 @@ applyVLine = function(plot, scale) {
   }
   return(plot)
 }
-applyAnnotations = function(plot, annotations, data_x) {
+applyAnnotations = function(plot, annotations, data_x_length) {
   if (is.null(annotations) == FALSE) {
-    if (length(data_x) == 12 || length(data_x) == 178) {
-      for (i in 1:(ceiling(length(data_x) / 12))) {
+    if (data_x_length == 12 || data_x_length == 178) {
+      for (i in 1:(ceiling(data_x_length / 12))) {
         for (annotation in annotations) {
           plot = plot + annotate(
             "rect",
