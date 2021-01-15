@@ -1,6 +1,8 @@
 # Style
-g_l_color <- "#3498db" #"steelblue"
+g_l_color <- "#3498db"
 g_l_color2 <- "#f39c12"
+main_season <- "#1e8449"
+lame_season <- "#f7dc6f"
 g_l_linetype <- 1
 g_p_size <- 1
 t_hjust <- 0.5
