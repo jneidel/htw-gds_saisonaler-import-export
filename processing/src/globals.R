@@ -19,7 +19,24 @@ get_scales <- function() {
         x_max = 12 * 15,
         vline = 12,
         angle = 0,
-        save_scale = "combined"
+        save_scale = "combined",
+        labels = c(
+          rep("", 6),"2006",rep("", 5),
+          rep("", 6),"2007",rep("", 5),
+          rep("", 6),"2008",rep("", 5),
+          rep("", 6),"2009",rep("", 5),
+          rep("", 6),"2010",rep("", 5),
+          rep("", 6),"2011",rep("", 5),
+          rep("", 6),"2012",rep("", 5),
+          rep("", 6),"2013",rep("", 5),
+          rep("", 6),"2014",rep("", 5),
+          rep("", 6),"2015",rep("", 5),
+          rep("", 6),"2016",rep("", 5),
+          rep("", 6),"2017",rep("", 5),
+          rep("", 6),"2018",rep("", 5),
+          rep("", 6),"2019",rep("", 5),
+          rep("", 6),"2020",rep("", 5)
+        )
       ),
       "yearly" = list(
         x_supplier = function(Data) {

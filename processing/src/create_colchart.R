@@ -5,6 +5,7 @@ library(reshape2)
 create_colchart <-
   function(dataframe,
            productName,
+           annotations,
            scale,
            ordinateProvider,
            is_Export) {
@@ -17,11 +18,9 @@ create_colchart <-
     plot = ggplot(data = dataframe, aes(
       x = as.factor(scale$x_supplier(dataframe)),
       y = ordinate$y_supplier(dataframe)
-    )) +
-      #      annotate("rect", xmin = 2.5, xmax = 10.5,
-      #               ymin = -Inf, ymax = Inf,
-      #               alpha = 0.2, fill = "#1e8449") +
-      geom_col(fill = g_l_color) +
+    ))
+    plot = applyAnnotations(plot, annotations, scale$x_supplier(dataframe))
+    plot = plot + geom_col(fill = g_l_color) +
       theme(plot.title = element_text(hjust = t_hjust),
             axis.line = element_line(linetype = 1)) +
       labs(
@@ -35,19 +34,11 @@ create_colchart <-
           scale$x_label
         )
       ) +
-      scale_x_discrete(
-        expand = expansion(add = .5),
-        breaks = dataframe$timeScale,
-        labels = dataframe$timeLabel
-      ) +
+      scale_x_discrete(expand = expansion(add = .5),
+                       labels = scale$labels) +
       scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05)))
     
-    if (scale$vline != -1) {
-      plot = plot + geom_vline(
-        xintercept = seq(scale$x_min, scale$x_max, by = scale$vline),
-        linetype = g_vl_linetype
-      )
-    }
+    plot = applyVLine(plot, scale)
     
     savePng("colcharts",
             plot,
@@ -60,6 +51,7 @@ create_colchart <-
 create_im_and_export_colchart <-
   function(dataframe,
            productName,
+           annotations,
            scale,
            ordinateProvider) {
     ordinateExport = ordinateProvider(dataframe, TRUE, TRUE)
@@ -68,13 +60,13 @@ create_im_and_export_colchart <-
       data.frame(
         Import = ordinateImport$y_supplier(),
         Export = ordinateExport$y_supplier(),
-        x = scale$x_supplier(dataframe)
+        x = as.factor(scale$x_supplier(dataframe))
       ),
       id.vars = 'x'
     )
-    
-    plot = ggplot(data = data_src, aes(x = x, y = value, fill = variable)) +
-      geom_col(position = "dodge") +
+    plot = ggplot(data = data_src, aes(x = x, y = value, fill = variable))
+    plot = applyAnnotations(plot, annotations, scale$x_supplier(dataframe))
+    plot = plot + geom_col(position = "dodge") +
       theme(plot.title = element_text(hjust = t_hjust),
             axis.line = element_line(linetype = 1)) +
       labs(
@@ -88,20 +80,12 @@ create_im_and_export_colchart <-
           scale$x_label
         )
       ) +
-      scale_x_discrete(
-        expand = expansion(mult = c(0, 0)),
-        breaks = dataframe$timeScale,
-        labels = dataframe$timeLabel
-      ) +
+      scale_x_discrete(expand = expansion(mult = c(0, 0)),
+                       labels = scale$labels) +
       scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
       scale_fill_manual(values = c(g_l_color, g_l_color2), name = "Legende")
     
-    if (scale$vline != -1) {
-      plot = plot + geom_vline(
-        xintercept = seq(scale$x_min, scale$x_max, by = scale$vline),
-        linetype = g_vl_linetype
-      )
-    }
+    plot = applyVLine(plot, scale)
     
     savePng("colcharts_combined",
             plot,
@@ -114,9 +98,9 @@ create_im_and_export_colchart <-
 create_boxPlot <-
   function(dataframe,
            productName,
+           annotations,
            x_row,
            scale,
-           scale_display,
            ordinateProvider,
            is_Export) {
     ordinate = ordinateProvider(dataframe, is_Export, FALSE)
@@ -126,10 +110,11 @@ create_boxPlot <-
       "Import"
     
     plot = ggplot(data = dataframe, aes(x = as.factor(x_row),
-                                        y = ordinate$y_supplier())) +
-      stat_boxplot(geom = "errorbar",
-                   width = 0.4,
-                   linetype = 1) +
+                                        y = ordinate$y_supplier()))
+    plot = applyAnnotations(plot, annotations, scale$x_supplier(dataframe))
+    plot = plot + stat_boxplot(geom = "errorbar",
+                               width = 0.4,
+                               linetype = 1) +
       geom_boxplot(fill = g_l_color, coef = 1.5) +
       theme(plot.title = element_text(hjust = t_hjust),
             axis.line = element_line(linetype = 1)) +
@@ -151,7 +136,7 @@ create_boxPlot <-
     savePng("boxplots",
             plot,
             productName,
-            scale_display,
+            scale,
             ordinate,
             operationName)
   }
@@ -159,9 +144,9 @@ create_boxPlot <-
 create_im_and_export_boxPlot <-
   function(dataframe,
            productName,
+           annotations,
            x_row,
            scale,
-           scale_display,
            ordinateProvider) {
     ordinateExport = ordinateProvider(dataframe, TRUE, TRUE)
     ordinateImport = ordinateProvider(dataframe, FALSE, TRUE)
@@ -175,10 +160,11 @@ create_im_and_export_boxPlot <-
       id.vars = "x"
     )
     
-    plot = ggplot(data = data_src, aes(x = x, y = value, fill = variable)) +
-      stat_boxplot(geom = "errorbar",
-                   #width = 0.4,
-                   linetype = 1) +
+    plot = ggplot(data = data_src, aes(x = x, y = value, fill = variable))
+    plot = applyAnnotations(plot, annotations, x_row)
+    plot = plot + stat_boxplot(geom = "errorbar",
+                               #width = 0.4,
+                               linetype = 1) +
       geom_boxplot(coef = 1.5) +
       theme(plot.title = element_text(hjust = t_hjust),
             axis.line = element_line(linetype = 1)) +
@@ -198,16 +184,43 @@ create_im_and_export_boxPlot <-
       scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
       scale_fill_manual(values = c(g_l_color, g_l_color2), name = "Legende")
     
-    savePng(
-      "boxplots_combined",
-      plot,
-      productName,
-      scale_display,
-      ordinateExport,
-      "Im-Export"
-    )
+    savePng("boxplots_combined",
+            plot,
+            productName,
+            scale,
+            ordinateExport,
+            "Im-Export")
   }
 
+applyVLine = function(plot, scale) {
+  if (scale$vline != -1) {
+    plot = plot + geom_vline(
+      xintercept = seq(scale$x_min, scale$x_max, by = scale$vline),
+      linetype = g_vl_linetype
+    )
+  }
+  return(plot)
+}
+applyAnnotations = function(plot, annotations, data_x) {
+  if (is.null(annotations) == FALSE) {
+    if (length(data_x) == 12 || length(data_x) == 178) {
+      for (i in 1:(ceiling(length(data_x) / 12))) {
+        for (annotation in annotations) {
+          plot = plot + annotate(
+            "rect",
+            xmin = annotation$xmin - 0.5 + (12 * (i - 1)),
+            xmax = annotation$xmax + 0.5 + (12 * (i - 1)),
+            ymin = -Inf,
+            ymax = Inf,
+            alpha = 0.2,
+            fill = "#1e8449"
+          )
+        }
+      }
+    }
+  }
+  return(plot)
+}
 savePng = function(dirName,
                    plot,
                    productName,
