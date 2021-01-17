@@ -11,9 +11,6 @@ create_datasets <- function(dataset, columnDefinition, name, annotations) {
   returnval[["monthly_sum"]] <- transform_dataset_monthly(dataset, columnDefinition, colSums)
   returnval[["monthly_avg"]] <- transform_dataset_monthly(dataset, columnDefinition, colMeans)
   
-  #returnval[["normalized_m"]] <- create_normalized_by_month_dataset(dataset, datasets["monthly"])
-  #returnval[["normalized_ym"]] <- create_normalized_by_year_and_month_dataset(dataset, datasets["yearly"], datasets["monthly"])
-
   return(returnval)
 }
 

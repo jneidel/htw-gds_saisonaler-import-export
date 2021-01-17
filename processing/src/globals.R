@@ -92,49 +92,6 @@ get_scales <- function() {
           "November",
           "Dezember"
         )
-      ),
-      
-      
-      
-      
-      "normalized_m" = list(
-        x_supplier = function(Data) {
-          return(purrr::map_dbl(Data$Order, function(a)
-            (a / 12) + 2006))
-        },
-        x_label = "Jahr",
-        x_min = 2006,
-        x_max = 2020,
-        vline = 1,
-        nudge = 1 / 2,
-        angle = 0,
-        save_scale = "M_normalized"
-      ),
-      "normalized_y" = list(
-        x_supplier = function(Data) {
-          return(purrr::map_dbl(Data$Order, function(a)
-            (a / 12) + 2006))
-        },
-        x_label = "Jahr",
-        x_min = 2006,
-        x_max = 2020,
-        vline = 1,
-        nudge = 1 / 2,
-        angle = 0,
-        save_scale = "Y_normalized"
-      ),
-      "normalized_ym" = list(
-        x_supplier = function(Data) {
-          return(purrr::map_dbl(Data$Order, function(a)
-            (a / 12) + 2006))
-        },
-        x_label = "Jahr",
-        x_min = 2006,
-        x_max = 2020,
-        vline = 1,
-        nudge = 1 / 2,
-        angle = 0,
-        save_scale = "YM_normalized"
       )
     )
   )
