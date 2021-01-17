@@ -22,15 +22,15 @@ define_dataset = function(list, columnDefinition, name, annotations) {
   return(list)
 }
 
-define_annotation = function(xmin, xmax, color){
-  return(list(xmin=xmin, xmax=xmax, color=color))
+define_annotation = function(xmin, xmax, color, alpha){
+  return(list(xmin=xmin, xmax=xmax, color=color, alpha=alpha))
 }
 
 create_all_datasets <- function(columnDefinition) {
   returnval <- list()
   
   returnval = define_dataset(returnval, columnDefinition, "\u00C4pfeln", list(define_annotation(9,12,main_season),define_annotation(1,4,main_season),define_annotation(5,8,lame_season)))
-  returnval = define_dataset(returnval, columnDefinition, "Birnen", list(define_annotation(8,11,main_season),define_annotation(12,12,lame_season),define_annotation(1,3,lame_season)))
+  returnval = define_dataset(returnval, columnDefinition, "Birnen", list(define_annotation(8,11,main_season, 0.2),define_annotation(12,12,lame_season),define_annotation(1,3,lame_season, 0.2)))
   returnval = define_dataset(returnval, columnDefinition, "Cornichons", list(define_annotation(7,10,main_season)))
   returnval = define_dataset(returnval, columnDefinition, "Erbsen", list(define_annotation(7,8,main_season),define_annotation(6,6,lame_season),define_annotation(9,9,lame_season)))
   returnval = define_dataset(returnval, columnDefinition, "Erdbeeren", list(define_annotation(6,8,main_season),define_annotation(5,5,lame_season),define_annotation(9,9,lame_season)))

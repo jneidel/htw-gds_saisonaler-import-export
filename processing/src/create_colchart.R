@@ -34,8 +34,7 @@ create_colchart <-
           scale$x_label
         )
       ) +
-      scale_x_discrete(expand = expansion(add = .5),
-                       labels = scale$labels) +
+      scale_x_discrete(expand = expansion(add = .5), labels = scale$labels) +
       scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05)))
     
     plot = applyVLine(plot, scale)
@@ -129,8 +128,7 @@ create_boxPlot <-
           scale$x_label
         )
       ) +
-      scale_x_discrete(expand = expansion(mult = c(0.05, 0.05)),
-                       labels = scale$labels) +
+      scale_x_discrete(expand = expansion(mult = c(0.05, 0.05)), labels = scale$labels) +
       scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05)))
     
     savePng("boxplots",
@@ -179,8 +177,7 @@ create_im_and_export_boxPlot <-
           scale$x_label
         )
       ) +
-      scale_x_discrete(expand = expansion(mult = c(0.05, 0.05)),
-                       labels = scale$labels) +
+      scale_x_discrete(expand = expansion(mult = c(0.05, 0.05)), labels = scale$labels) +
       scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
       scale_fill_manual(values = c(g_l_color, g_l_color2), name = "Legende")
     
@@ -212,7 +209,7 @@ applyAnnotations = function(plot, annotations, data_x_length) {
             xmax = annotation$xmax + 0.5 + (12 * (i - 1)),
             ymin = -Inf,
             ymax = Inf,
-            alpha = 0.2,
+            alpha = annotation$alpha,
             fill = annotation$color
           )
         }
