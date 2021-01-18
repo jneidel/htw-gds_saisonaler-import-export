@@ -189,11 +189,6 @@ Projektmanager
 \begin{frame}
 \frametitle{Export und Import}
 	@Jörg @Trung
-	\begin{description}
-		\item[Außenhandel] Großhandel von Deutschland
-		\item[Export]
-		\item[Import]
-	\end{description}
 \end{frame}
 
 \section{Datenbeschaffung und -aufbereitung}
@@ -205,26 +200,129 @@ Projektmanager
 
 \begin{frame}
 	\frametitle{Beginn der Datensuche}
-		\begin{enumerate}
-			\item Statistische Jahrbuch des Bundesministeriums für Ernährung und Landwirtschaft (BMEL)
-		\end{enumerate}	
-
-	allgemeine Datensuche: erste Quelle von 
-	BMEL Bundesministerium für Ernährung und Landwirtschaft - statistisches Jahrbuch (jährlich veröffentlich)
-	kein Datensatz, sondern PDF - Daten manuell erhoben
-
-	Problem: Es fehlten Monate - Datensätze wären unvollständig
-
-	Lösung: Quellenanalyse des Jahrbuch -> Quelle selbst angeschaut 
-
-	%Bilder/Screenshots einfügen
+		\begin{itemize}
+			\item statistische Jahrbuch des Bundesministeriums für Ernährung und Landwirtschaft (BMEL)
+			\begin{itemize}
+				\item bestehend aus einzelnen Monatsberichten des jeweiligen Jahres
+				\item beinhaltet themenrelevante Tabellen, wie zB Import-/Export der Kartoffelverarbeitung
+				\item nur in PDF Format vorliegend
+			\end{itemize}
+		\end{itemize}	
 \end{frame}
 
 \begin{frame}
-	\frametitle{Ende und Lösungen}
-	Datensatz gefunden auf destatis.de - StBa statistisches Bundesamt 
-	raw data gefunden - Download möglich
-	Export in Excel um csv lesbar zu machen und Übersicht zu verschaffen
+	\frametitle{Beginn der Datensuche}
+	\begin{figure}[h]
+	\caption{Beispieltabelle aus dem statistischen Jahrbuch}
+	\centering
+	\includegraphics[scale=0.5]{3_Beispieltabelle}
+		%Größe mit Daniel noch besprechen und Quellen einfügen
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Probleme}
+	\begin{itemize}
+		\item Dateiformat
+			\begin{itemize}
+				\item Informationen per Hand exportiert
+			\end{itemize}
+		\item unvollständiger Datensatz
+			\begin{itemize}
+				\item Berichte nicht immer mit den selben Tabellen ausgestattet
+				\item nicht alle Monate im Jahrbuch vorliegend
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Probleme}
+	\begin{figure}[h]
+		\caption{unvollständige Auflistung}
+		\centering
+		\includegraphics[scale=0.3]{4_Monatsberichte_unvoll}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Weitere Suche}
+	\begin{itemize}
+		\item statista.com
+			\begin{itemize}
+				\item simple Statistiken
+				\item einzelne Diagramme
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{statista.com}
+	\begin{figure}[h]
+		\caption{Beispieltabelle aus statista.com}
+		\centering
+		\includegraphics[scale=0.3]{5_Destatis_Report}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{statista.com}
+	\begin{figure}[h]
+		\caption{Beispieltabelle von statista.com}
+		\centering
+		\includegraphics[scale=0.25]{5_Destatis_Report_highlightet}
+	\end{figure}
+\end{frame}  
+
+\begin{frame}
+	\frametitle{Lösungen}
+	\begin{itemize}
+		\item Analyse der Quellen
+			\begin{itemize}
+				\item Datenbank vom Statistischen Bundesamt (DeStatis)
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Lösungen}
+	\begin{figure}[h]
+		\caption{Auszug der Genesis-Website}
+		\centering
+		\includegraphics[scale=0.15]{6_Denesis_Destatis}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Lösung}
+	\begin{figure}[h]
+		\caption{Auszug der Tabellenübersicht von Genesis}
+		\centering
+		\includegraphics[scale=0.2]{8_Tabellen_codes}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Lösung}
+	\begin{itemize}
+		\item Generierung einer CSV Datei über Auswahl von relevanten Spalten/Zeilen
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{}
+	\begin{figure}[h]
+		\caption{CSV Generierung auf der Genesis Website}
+		\centering
+		\includegraphics[scale=0.25]{9_Tabellanaufbau}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Lösung}
+	\begin{itemize}
+		\item Import in Excel
+		\item anschließend grobe Aufbereitungsschritte in kleinere CSV-Dateien
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
