@@ -97,18 +97,25 @@ get_scales <- function() {
   )
 }
 
+shouldDataframeScale = function(dataRow){
+  return (is.null(dataRow) == FALSE && 
+            is.na(max(dataRow, na.rm = TRUE)) == FALSE &&
+            max(dataRow, na.rm = TRUE) >= 1000)
+}
+
 get_ordinates <- function() {
   return(list(
-    "weight" = function(Dataframe, is_Export, ignoreDividing) {
+    "weight" = function(Dataframe, is_Export, is_Combined) {
       if (is_Export) {
-        row = Dataframe$Ausfuhr..Gewicht
+        rowName = "Ausfuhr..Gewicht"
+        rowName2 = "Einfuhr..Gewicht"
       }
       else {
-        row = Dataframe$Einfuhr..Gewicht
+        rowName = "Einfuhr..Gewicht"
+        rowName2 = "Ausfuhr..Gewicht"
       }
       
-      if (is.na(max(row, na.rm = TRUE)) == FALSE &&
-          max(row, na.rm = TRUE) >= 1000 && ignoreDividing == FALSE) {
+      if (shouldDataframeScale(Dataframe[[rowName]]) || (is_Combined == TRUE && shouldDataframeScale(Dataframe[[rowName2]]))) {
         divider = 1
       }
       else {
@@ -117,7 +124,7 @@ get_ordinates <- function() {
       
       list(
         y_supplier = function(Data) {
-          return(purrr::map_dbl(row, function(a)
+          return(purrr::map_dbl(Dataframe[[rowName]], function(a)
             a / divider))
         },
         y_label = "Masse in t",
@@ -125,16 +132,17 @@ get_ordinates <- function() {
         save_ordinate = "weight"
       )
     },
-    "euro" = function(Dataframe, is_Export, ignoreDividing) {
+    "euro" = function(Dataframe, is_Export, is_Combined) {
       if (is_Export) {
-        row = Dataframe$Ausfuhr..Wert
+        rowName = "Ausfuhr..Wert"
+        rowName2 = "Einfuhr..Wert"
       }
       else {
-        row = Dataframe$Einfuhr..Wert
+        rowName = "Einfuhr..Wert"
+        rowName2 = "Ausfuhr..Wert"
       }
       
-      if (is.na(max(row, na.rm = TRUE)) == FALSE &&
-          max(row, na.rm = TRUE) >= 1000 && ignoreDividing == FALSE) {
+      if (shouldDataframeScale(Dataframe[[rowName]]) || (is_Combined == TRUE && shouldDataframeScale(Dataframe[[rowName2]]))) {
         divider = 1000
         y_label = "Volumen in Mio. \u20AC"
         y_title = "volumen in Euro"
@@ -146,7 +154,7 @@ get_ordinates <- function() {
       }
       list(
         y_supplier = function(Data) {
-          return(purrr::map_dbl(row, function(a)
+          return(purrr::map_dbl(Dataframe[[rowName]], function(a)
             a / divider))
         },
         y_label = y_label,
@@ -154,16 +162,17 @@ get_ordinates <- function() {
         save_ordinate = "Euro"
       )
     },
-    "euro_per_weight" = function(Dataframe, is_Export, ignoreDividing) {
+    "euro_per_weight" = function(Dataframe, is_Export, is_Combined) {
       if (is_Export) {
-        row = Dataframe$Ausfuhr..Wert.Gewicht
+        rowName = "Ausfuhr..Wert.Gewicht"
+        rowName2 = "Einfuhr..Wert.Gewicht"
       }
       else {
-        row = Dataframe$Einfuhr..Wert.Gewicht
+        rowName = "Einfuhr..Wert.Gewicht"
+        rowName2 = "Ausfuhr..Wert.Gewicht"
       }
       
-      if (is.na(max(row, na.rm = TRUE)) == FALSE &&
-          max(row, na.rm = TRUE) >= 1000 && ignoreDividing == FALSE) {
+      if (shouldDataframeScale(Dataframe[[rowName]]) || (is_Combined == TRUE && shouldDataframeScale(Dataframe[[rowName2]]))) {
         divider = 1
       }
       else {
@@ -171,7 +180,7 @@ get_ordinates <- function() {
       }
       list(
         y_supplier = function(Data) {
-          return(purrr::map_dbl(row, function(a)
+          return(purrr::map_dbl(Dataframe[[rowName]], function(a)
             a / divider))
         },
         y_label = "Wert in \u20AC/t",
