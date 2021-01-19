@@ -3,7 +3,7 @@
 > Exploratives Data Science Projekt zur Import/Export von saisonalen Produkten
 
 ## Organisation
- 
+
 - [Pad](https://pad.riseup.net/p/gds-orga-keep)
 - [Meeting Raum](https://meet.in-berlin.de/gds)
 
@@ -76,4 +76,5 @@ Projektmanagement: Jonathan
 ## Stack
 
 - R
-- Latex (document format)
+- Beamer - Latex (presentation format)
+
