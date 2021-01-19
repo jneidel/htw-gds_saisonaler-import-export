@@ -14,8 +14,8 @@ command -v biber >/dev/null || { echo "biber is not installed"; exit 1; }
 RM_AUX=0
 
 pdflatex "$FILE" || RM_AUX=1
-biber "$FILE" || RM_AUX=1
-pdflatex "$FILE" || RM_AUX=1
+# biber "$FILE" || RM_AUX=1
+# pdflatex "$FILE" || RM_AUX=1
 
 if [ "$RM_AUX" -gt 0 ]; then
   rm "$FILE.aux" # if things are borked
