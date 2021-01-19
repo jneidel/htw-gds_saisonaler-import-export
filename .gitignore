@@ -15,4 +15,9 @@
 
 # output
 *.pdf
+
+# R
 .Rproj.user
+.Rhistory
+.RData
+.Ruserdata
