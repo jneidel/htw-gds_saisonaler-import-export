@@ -20,15 +20,18 @@
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 
+%small captions
+\usepackage[font=scriptsize]{caption}
+
 \title{Import/Export von saisonalen Produkten}
 % \subtitle{}
 \author[Dao, Gabele, Neidel, Neuthor, Spannbauer, Wiegandt]{
-  Dao, Duc Trung \and\\
-  Gabele, Jörg \and\\
-  Neidel, Jonathan \and\\
-  Neuthor, Marco \and\\
-  Spannbauer, Daniel \and\\
-  Wiegandt, Lisa-Marlen
+  Dao, Duc Trung, 575477 \and\\
+  Gabele, Jörg, 571127 \and\\
+  Neidel, Jonathan, 573619 \and\\
+  Neuthor, Marco, 573738 \and\\
+  Spannbauer, Daniel, 572836 \and\\
+  Wiegandt, Lisa-Marlen, 572770
 }
 \date{Januar 2021}
 \institute{HTW Berlin, Angewandte Informatik}
@@ -256,6 +259,13 @@ eigenen Einkommens, persönlicher Geschmack und der Preis ähnlicher Produkte.
 	\end{center}
 \end{frame}
 
+\section{Datenbeschaffung}
+\begin{frame}
+	\begin{center}
+		{\Huge Datenbeschaffung}
+	\end{center}
+\end{frame}
+
 \begin{frame}
 	\frametitle{Beginn der Datensuche}
 		\begin{itemize}
@@ -265,11 +275,13 @@ eigenen Einkommens, persönlicher Geschmack und der Preis ähnlicher Produkte.
 		\begin{figure}[!tbp]
   			\centering
 			\begin{minipage}[b]{0.3\textwidth}
-    			\includegraphics[scale=0.15, width=\textwidth]{1_BMEL-Statistisches_Jahrbuch}
+			\caption{https://www.bmel-statistik.de/archiv/statistisches-jahrbuch/}
+			\includegraphics[scale=0.15, width=\textwidth]{1_BMEL-Statistisches_Jahrbuch}
   			\end{minipage}
   		\hfill
 			\begin{minipage}[b]{0.4\textwidth}
-    			\includegraphics[scale=0.4,width=\textwidth]{2_Monatsberichte}
+    				\caption{https://www.bmel-statistik.de/archiv/statistischer-monatsbericht/}
+				\includegraphics[scale=0.4,width=\textwidth]{2_Monatsberichte}
   			\end{minipage}
 		\end{figure}
 \end{frame}
@@ -277,19 +289,10 @@ eigenen Einkommens, persönlicher Geschmack und der Preis ähnlicher Produkte.
 \begin{frame}
 	\frametitle{Beginn der Datensuche}
 	\begin{figure}[h]
-	\caption{Beispieltabelle aus dem statistischen Jahrbuch}
+	\caption{Statistischer Monatsbericht von Juni 2020 (Seite 489)}
 	\centering
 	\includegraphics[scale=0.5]{3_Beispieltabelle}
-		%Größe mit Daniel noch besprechen und Quellen einfügen
 	\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Probleme}
-	\begin{itemize}
-		\item Informationen per Hand exportiert
-		\item unvollständiger Datensatz
-	\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -302,29 +305,9 @@ eigenen Einkommens, persönlicher Geschmack und der Preis ähnlicher Produkte.
 \end{frame}
 
 \begin{frame}
-	\frametitle{Weitere Suche}
-	\begin{itemize}
-		\item statista.com
-			\begin{itemize}
-				\item simple Statistiken
-				\item einzelne Diagramme
-			\end{itemize}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
 	\frametitle{statista.com}
 	\begin{figure}[h]
-		\caption{Beispieltabelle von statista.com}
-		\centering
-		\includegraphics[scale=0.3]{5_Destatis_Report}
-	\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{statista.com}
-	\begin{figure}[h]
-		\caption{Beispieltabelle von statista.com}
+		\caption{https://de.statista.com/statistik/daten/studie/206617/umfrage/importmenge-von-obst-und-gemuese-nach-deutschland/}
 		\centering
 		\includegraphics[scale=0.3]{5_Destatis_Report_highlightet}
 	\end{figure}
@@ -333,7 +316,7 @@ eigenen Einkommens, persönlicher Geschmack und der Preis ähnlicher Produkte.
 \begin{frame}
 	\frametitle{Lösungen}
 	\begin{figure}[h]
-		\caption{Startseite der Genesis-Website}
+		\caption{https://www-genesis.destatis.de/genesis/online}
 		\centering
 		\includegraphics[scale=0.15]{6_Denesis_Destatis}
 	\end{figure}
@@ -342,7 +325,7 @@ eigenen Einkommens, persönlicher Geschmack und der Preis ähnlicher Produkte.
 \begin{frame}
 	\frametitle{Lösung}
 	\begin{figure}[h]
-		\caption{Auszug der Tabellenübersicht von Genesis}
+		\caption{https://www-genesis.destatis.de/genesis/online?operation=find\& suchanweisung\_ language=de\& query=51000\# abreadcrumb}
 		\centering
 		\includegraphics[scale=0.2]{8_Tabellen_codes}
 	\end{figure}
@@ -351,7 +334,7 @@ eigenen Einkommens, persönlicher Geschmack und der Preis ähnlicher Produkte.
 \begin{frame}
 	\frametitle{}
 	\begin{figure}[h]
-		\caption{Datensatz Generierung auf der Genesis Website}
+		\caption{https://www-genesis.destatis.de/genesis/online?operation=abruftabelleBearbeiten\& levelindex=0\& levelid=1610310696241\& auswahloperation=abruftabelleAuspraegungAuswaehlen\& auswahlverzeichnis=ordnungsstruktur\& auswahlziel=werteabruf\& code=51000-0014\& auswahltext=\& wertauswahl=256\& wertauswahl=253\& wertauswahl=257\& wertauswahl=254\& transponieren=1610310713629\# astructure}
 		\centering
 		\includegraphics[scale=0.25]{9_Tabellanaufbau}
 	\end{figure}
@@ -373,18 +356,26 @@ eigenen Einkommens, persönlicher Geschmack und der Preis ähnlicher Produkte.
 \end{frame}
 
 \begin{frame}
-	\frametitle{Datenstruktur}
-	\begin{figure}[b]
-		\centering
-		\includegraphics[scale=0.6]{Marco_1_Folie_1}
-	\end{figure}
+	\frametitle{Standardachsen}
+	x-Achse:
+	\begin{itemize}
+		\item kombiniert
+		\item jährlich (Durchschnitt)
+		\item monatlich (Durchschnitt)
+	\end{itemize}
+	y-Achse:
+	\begin{itemize}
+		\item Gewicht in Tonnen
+		\item Volumen in Euro
+		\item Volumen pro Gewicht (Euro/Tonne)
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Datenstruktur}
 	\begin{figure}[b]
 		\centering
-		\includegraphics[scale=0.6]{Marco_1_Folie_2}
+		\includegraphics[scale=0.4]{Folie2}
 	\end{figure}
 \end{frame}
 
@@ -393,7 +384,7 @@ eigenen Einkommens, persönlicher Geschmack und der Preis ähnlicher Produkte.
 	\begin{itemize}
 		\item diskrete Daten an der Abszisse
 		\begin{itemize}
-			\item falsche Aussagen aus Liniendigramm
+			\item falsche Aussagen aus Liniendigramm 
 		\end{itemize}
 		\item optische Abgrenzung schwierig
 		\item Saisons nicht erkennbar
@@ -425,15 +416,7 @@ eigenen Einkommens, persönlicher Geschmack und der Preis ähnlicher Produkte.
 	\frametitle{Probleme Boxplot}
 	\begin{figure}[b]
 		\centering
-		\includegraphics[scale=0.35]{Marco_5_Folie_1}
-	\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Probleme Boxplot}
-	\begin{figure}[b]
-		\centering
-		\includegraphics[scale=0.35]{Marco_5_Folie_2}
+		\includegraphics[scale=0.4]{boxplots-folie-5}
 	\end{figure}
 \end{frame}
 
@@ -441,15 +424,7 @@ eigenen Einkommens, persönlicher Geschmack und der Preis ähnlicher Produkte.
 	\frametitle{Boxplot - Ausreißer}
 	\begin{figure}[b]
 		\centering
-		\includegraphics[scale=0.35]{Marco_6_Folie_1}
-	\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Boxplot - Ausreißer}
-	\begin{figure}[b]
-		\centering
-		\includegraphics[scale=0.35]{Marco_6_Folie_2}
+		\includegraphics[scale=0.4]{boxplot-prob-gesamt}
 	\end{figure}
 \end{frame}
 
@@ -460,51 +435,6 @@ eigenen Einkommens, persönlicher Geschmack und der Preis ähnlicher Produkte.
 	\end{center}
 \end{frame}
 
-% jonathan
-\begin{frame}
-\frametitle{Äpfel}
-  \begin{figure}[h]
-    \centering
-    \includegraphics[height=6cm]{0_apfel_markt}
-  \end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Äpfel}
-  \begin{figure}[h]
-    \centering
-    \includegraphics[height=6cm]{0_apfel_import}
-  \end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Äpfel}
-  \begin{figure}[h]
-    \hbox{\hspace{-1cm}
-    \includegraphics[width=12.5cm]{1_apfel_gegenlaeufig1}
-    }
-  \end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Spargel}
-  \begin{figure}[h]
-    \hbox{\hspace{-1cm}
-    \includegraphics[width=12.5cm]{3_spargel_import2}
-    }
-  \end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Orangen}
-  \begin{figure}[h]
-    \hbox{\hspace{-1cm}
-    \includegraphics[width=12.5cm]{5_oranges2}
-    }
-  \end{figure}
-\end{frame}
-
-% lisa
 \begin{frame}
 	\frametitle{Kürbisse}
 	\begin{figure}[b]
@@ -525,9 +455,9 @@ eigenen Einkommens, persönlicher Geschmack und der Preis ähnlicher Produkte.
 \begin{frame}
 	\frametitle{Fazit}
 	\begin{itemize}
-		\item Außenhandel beeinflusst durch Saison
-		\item bei Produkten mit längerer Saison wenig Beeinflussung
-		\item Auswirkungen auf Preis schwanken (noch checken LOL)
+		\item Saison eines Produktes beeinflusst Außenhandel
+		\item bei Produkten mit längerer Saison/Lagerware weniger Beeinflussung des Außenhandels
+		\item Preis sinkt bei starkem Einfluss der Saison
 	\end{itemize}
 \end{frame}
 
