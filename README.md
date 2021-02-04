@@ -2,6 +2,8 @@
 
 > Exploratives Data Science Projekt zur Import/Export von saisonalen Produkten
 
+[Slides](document/main.pdf)
+
 ## Organisation
 
 - [Pad](https://pad.riseup.net/p/gds-orga-keep)
