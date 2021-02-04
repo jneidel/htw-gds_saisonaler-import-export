@@ -1,0 +1,236 @@
+Repo: https://github.com/jneidel/htw-gds
+
+# post mortem ?
+
+# meeting notes 19.1.
+lastest slides: https://jneidel.com/main.pdf
+
+Generalprobe
+
+Voraussetzungen:
+	- Inhalt fertig (ich weiß was ich sage)
+	- Folien fertig (meine Folien sind in Latex umgesetzt, spiegeln meinen Inhalt wider, Quellen sind angegeben)
+	- zuhause durchgesprochen und nicht länger als 5min geredet
+
+# meeting notes 17.1.
+https://jneidel.com/slides.pdf (trung & jörg)
+
+## Reihenfolge
+- Intro (Li)
+- Definitionen (Saision, Im/Export, Warennummern) (Tr)
+- Wirtschaftliche Hintergründe (Jö)
+- Datenbeschaffung (Da)
+- Datenverarbeitung (Ma)
+- Ergebnisvorstellung (Jo, Li)
+- Fazit (Li)
+
+Saisons: https://www.bzfe.de/nachhaltiger-konsum/orientierung-beim-einkauf/der-saisonkalender/saisonzeiten-bei-obst-und-gemuese/
+
+# meeting notes 10.1.21
+
+Wie lief: (Recap)
+	* Präsi Strukturierung?
+	* Datenvisualisierung?
+	* Theorie?
+
+## diskurs:
+
+Warennummern und deren Aufsplittung: https://www.aussenhandel.biz/wn
+
+Visualisierungensideen:
+	- Untereinander vergleichen (Exportschlager)
+	- Price/Demand Elacicity https://www.investopedia.com/terms/p/priceelasticity.asp
+	- Jedes Produkt eine Farbe
+
+## Marco: Datenvisualisierung & Prozess - R
+## Daniel: Datenfindung & Vorbehandlung
+## Marco & Dan:
+	- Diagramme auf Vordermann
+	- neue Diagramme erstellen
+	
+## Trung: Theorie der Daten
+	- Wie wir zum Datensatz gekommen sind
+	- Warennummern erklären
+		Warenverzeichnis (4-/6-Steller)        Name
+		WA070190                Kartoffeln, frisch oder gekühlt, a.n.g.
+		WA070920                Spargel, frisch oder gekühlt
+		WA080510                Orangen, frisch oder getrocknet
+		WA080550                Zitronen und Limetten, frisch oder getrocknet
+		WA081010                Erdbeeren, frisch
+	- Rücksprache mit Dan
+
+## Jörg: Theorie
+	- Wirtschaftliche Hintergründe
+
+## Jonathan: Vorstellung der Orga, Reflektion des Gesamtprozesses
+	- Probleme im Prozess festhalten
+		Problem mit der explorativen Herangehensweise:
+			- Unklarheit wohin es gehen soll.
+	- Lisa auf den Stand der Dinge bringen
+	
+## Jonathan && / || Lisa: Vorstellung der Diagramme
+## Lisa: ? Einleitung/Fazit - gibt es ein Fazit?
+	- Struktur herausfinden (welches Thema hat eine Dependency auf ein anderes)
+
+## nächter Termin:
+	- Inhaltlich alles fertig
+	- Generalprobe der Präsentation
+	
+### Präsi
+- 30min oder 5min/person +10min Fragen
+- Bei Ihrer schriftlichen Dokumentation / mündlichen Präsentation müssen
+	Sie sich an der nachfolgenden Struktur orientieren (vgl. ff.)
+	1 Problemformulierung
+	2 Grundlagen / Theorie
+	3 Methodologie / Untersuchungsplanung
+	4 Untersuchungsdurchführung, Auswertung und Ergebnisinterpretation
+	5 Zusammenfassung
+
+## Prof Qs:
+- Bewertungsschema? - Einzel nicht sinnvoll.
+- Seminararbeit? - schriftliche Doku?
+- Orientierung an der ggb. Struktur?
+
+# meeting notes 2.1.21
+
+Wie lief: (Recap
+	* Datenverarbeitung?
+		* Vorstellbares Ergebnis?
+		* Wie lief in Kommunikation innerhalb der Arbeitsgruppe?
+	* Datenvisualisierung?
+	* Theorie/Grundlagen?
+		* J: noch nicht super viel gelesen, aber ein paar Vergleiche/Referenzen werden sich finden lassen. Als Grundlagen könnte man z.B. das EPS (EU entry price system for fruits & vegetables) vorstellen (evtl. out of scope)
+	* Strukturierung der Präsentation?
+		* falls Nein -> Gliederungsschema aus den Folien anpassen
+
+Präsentation:
+- mit Latex Beamer
+- vorbereitet auf Github: main.tex
+- Beispiel: https://jneidel.com/main.pdf
+	- theme und colortheme sind nicht final
+- Vorgehen um der Präsentation euren Teil hinzuzufügen:
+	- neue branch erstellen (git checkout -b NAME)
+	- commit changes
+	- push changes to github (git push origin NAME)
+	- auf github PR von der branch aufmachen und alle anderen als Reviewer markieren
+	
+Wie geht es weiter:
+    PDF strukturieren - Theorie/eigene Definitionen einfügen
+    Allgemeine Fragestellung(en) für alle Produkte klären (Hauptfokus auf Preis/Tonne) - statistische Werte/Aussagen miteinbeziehen
+    
+    Theorie: Saisons definieren
+    Visualisierung: Tool = R ggplot2 
+    Statistik:
+        - Trendlininen generell und Saison
+        - Import Export in ein Diagramm
+        - Evtl. Balkendiagramme
+
+Fragestellungen/Theorien:
+	Fokus: Wie verhält sich der Tonnenpreis in Euro allgemein im Laufe eines Jahres und im speziellen in der Saison? (Preis/Gewicht) (Korreliert dieses Verhältnis mit der Saison?)
+
+		Bsp Spargel: warum wird während einer bestimmten Zeitspanne so stark importiert, obwohl die sogenannte "Spargel-Saison" (Spargel wächst in Deutschland gut) ist? (Theorie: Import billiger als Produktion oder Marketing Aktion und jetzt nicht genug Eigenprofuktion?)
+		Gibt es Auswirkungen auf den Export/Import durch die Covid-19 Pandemie? (Preissteigung?, Menge des Imports/Exports)
+		Preis/Gewicht pro Monat je Produkt, wie verhält sich dieser Wert?
+			Dazu vergleich mit Exportgewicht und Saision 
+	"Interessante Beobachtung":
+		Bsp Spargel: Habt ihr schon mal Spargel außerhalb der Spargel-Saison gegessen? (Facts dazu recherchieren: Warum Spargel-Saison? Gibt es Infos dazu, warum wir nur in dieser Zeit Spargel essen?)
+
+# meeting notes 16.12.
+"Saisonale Veränderungen im Import/Export von einigen Obst/Gemüsesorten in Deutschland."
+	- Kartoffeln
+	- Zitrusfrüchte
+	- Spargel
+	- Beeren
+	- Äpfel
+	- Orangen
+
+Konkrete Ergebnisse
+- Verantwortlichkeiten und Projektplan aufgestellt
+- Daten beschafft und prepariert
+- Exploration begonnen
+Bis zum nächsten Workshop
+- Modellierung
+- Auswertung
+- ...
+
+Was hält uns ab unsere Ziele zu erreichen
+- Prokrastination
+
+# meeting notes 14.12.
+## Agenda
+
+Wie lief: (Recap)
+	* Datenbeschaffung/Prep?
+		* Vorstellung des Datensatzes (Qualität/Detailgrad, Zeitraum, Länder, Produkte, etc.)
+		* Sind die Daten ausreichend? - JA (Bundesamt für Statistik - de-statis), aber unklar, ob vom Feld oder aus Gewächshaus die Lebensmittel stammen -> eigene Definition: Beachten wir nicht lol
+	* Theorie/Grundlagen?
+		* Jonathan: Papers eingesammelt (divers: andere Länder zum Vergleich, Preisveränderungen, etc.) - noch nicht wirklich reviewed. Weil Fragestellung noch unkonkret war die Suche etwas schwierig
+		* Gibt es ein Standardwerk zu Gemüse/Obst Import/Export? - statistisches Jahrbuch, Tabellen vom de-statis haben auch Erläuterungen
+
+Wie geht es weiter:
+	- Ist den Modelliern/Datenverarbeitern klar wie jetzt vorzugehen ist? (vgl. Vorlesungen) - Jein, step one: rumexperimentieren mit den Daten, was können wir darstellen?
+	- Daten von 2008-2020* unter Monaten aufteilen: vergleiche der Jahre (Regression beachten) -> Schmidt fragen ob in Ordnung? (da dann nur 12 Datenpunkte vorliegen)
+	- Was brauchen die Visualisierer zum Starten? Verarbeitete Daten
+	- Was kann beim Zwischenstandsmeeting am 16. vorgestellt werden? Regression berechnen? Soll die Arbeit eine Dokumentation des Arbeitsweges sein oder wissenschaftliche Arbeit, die eine These belegt/widerlegt?
+
+Offene Fragen: (Diskussion)
+	- Kann/Soll basierend auf den Daten die Fragestellung schon konkretisiert werden?
+		- Auf die 10 größten Handelsländer beschränken? - Wenn wir die Daten haben ist es doch egal, oder? Entfernen anderer Ländern macht den Datensatz doch ungenauer (Verfälschung der Abbildung der Realität) und wenn es uns nur um den Import/Export Deutschlands geht ist die Gegenseite doch egal.
+		- konkreter Fragenvorschlag: Wie verändert sich der Preis von einigen importierten/exportierten Obst/Gemüsesorten in Deutschland wenn diese in Saison sind? (Rausfinden wann etwas in Saison ist)
+			- Beschränkung auf Deutschland: Es kann auch ein anderes Land sein, unser Bezug spricht aber für Deutschland. Großbritanien wäre interessant: https://www.businessinsider.com/no-deal-brexit-percentage-british-food-imported-shortages-2019-1 - NO, Fokus nur auf Deutschland
+			- Beschränkung auf Preis: Einfache Metrik, kann auch als Messkriterium aus der Frage entfert werden um das ganze generischer zu halten ("Wie verhalten sich einige importierte ...")
+	- Trungs Daten bei Github hochladen?
+	
+Hinweis von Jonathan:
+Trefft euch gern innerhalb der Arbeitsgruppen (z.B. alle Datenverarbeiter) um euch untereinander zu koordinieren/organizieren.
+
+To-Do's Step 2:
+		* Noch klären, wann Lebensmittel in welchen Land Saison haben, um sich auf Monate zu beschränken zu können
+		* Welche Länder sollen betrachtet werden? - Außenhandel von Deutschland
+		* Klären, auf welche Gemüse-/Obstsorten sich beschränkt werden soll
+		* Definitieren, was bedeutet in unserer Arbeit Export und Import
+		* Eventuell noch betrachten: Wie hoch ist der Eigenverbrauch von Deutschland? Wie sind die Preise im Großhandel?
+		* Fragestellung/Hypothese genau definieren, damit Datenverarbeitung statt finden kann
+		* Umgang mit R
+
+Fürs Essay/Einleitung:
+		* Lebensmittelaußenhandel im Relation zum Gesamtaußenhandel -> Wichtigkeit darstellen
+
+Mögliche Thesen:
+    Der Außenhandel steigt innerhalb der Saison eines bestimmten Lebensmittels an, dadurch sinkt der Preis pro Gewichtseinheit.
+    Die Saison eines bestimmten Produktes verändert den Preis/den Außenhandel.
+    Wie veränderte sich der Preis von importierten/exportierten (hier Lebensmittel eintragen) in Deutschland, wenn diese in Saison sind?
+
+# meeting notes 29.11.
+
+Was ist ein saisonales Produkt?
+	- Obst & Gemüse
+
+Einschränkung auf ein paar Produkten:
+	- Kartoffeln (Vergleichprodukt)
+	- Zitrusfrüchte
+	- Spargel
+	- Beeren
+	- Äpfel
+	- Orangen
+	- Sternfrucht (keine Daten)
+	- Avocado (keine Daten)
+	- ...
+
+Unterscheidung nach Herkunftsregion
+	- Wie schlägt sich das auf den Preis aus
+
+Einfluss des Gewächshaus
+		Wie können wir differenzieren ob ein Produkt in solch einem angebaut wurde - ist dies innerhalb der Saison relevant? - Können wir nicht, daher: "Ignorieren" im Rahmen unserer Arbeit
+
+# Quellen
+	- https://data.europa.eu
+	- https://www.govdata.de
+	- https://www.bmel-statistik.de/archiv/statistisches-jahrbuch
+	- https://literatur.thuenen.de/digbib_extern/dn059917.pdf
+	Zusammenfassung: Seite 6 von File PDF
+	Import/ Export von Obst in Deutschland: Von S143 bis S153 von File PDF (S123 bis 133 vom Buch)
+	- https://de.statista.com
+	- https://www.weser-kurier.de/deutschland-welt/deutschland-welt-vermischtes_artikel,-welches-obst-und-gemuese-deutschland-importiert-_arid,1905182.html (Welches Obst und Gemüse Deutschland importiert?)
+	- https://www-genesis.destatis.de/genesis/online
+		- Suche nach: 51000-0011

@@ -6,7 +6,7 @@
 
 ## Organisation
 
-- [Pad](https://pad.riseup.net/p/gds-orga-keep)
+- [Pad](https://pad.riseup.net/p/gds-orga-keep) - [dump](pad.txt)
 - [Meeting Raum](https://meet.in-berlin.de/gds)
 
 ### Projektphasen
